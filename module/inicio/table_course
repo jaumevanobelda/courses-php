@@ -1,0 +1,60 @@
+    
+<?php
+    function table_course($course){
+    $id=$course['id'];
+    $nombre=$course['nombre'];
+    $description=$course['description'];
+    $categoria=$course['categoria'];
+    $llenguatge=$course['llenguatge'];
+    $level=$course['level'];
+    $price=$course['price'];
+    $start=$course['start'];
+    $end=$course['end'];
+    $buydate=$course['buydate'];
+
+
+        return"<div> <table border=2>
+        <tr>
+            <td>id: </td>
+            <td> $id   </td>
+        </tr>
+        <tr>
+            <td>nombre: </td>
+            <td> $nombre   </td>
+        </tr>
+        <tr>
+            <td>descripcion: </td>
+            <td> $description   </td>
+        </tr>
+        <tr>
+            <td>categoria: </td>
+            <td> $categoria   </td>
+        </tr>
+        <tr>
+            <td>llenguatges: </td>
+            <td> $llenguatge   </td>
+        </tr>
+        <tr>
+            <td>nivel: </td>
+            <td> $level   </td>
+        </tr>
+        <tr>
+            <td>precio: </td>
+            <td> $price   </td>
+        </tr>
+        <tr>
+            <td>fecha de inicio: </td>
+            <td> $start   </td>
+        </tr>
+        <tr>
+            <td>fecha final: </td>
+            <td> $end   </td>
+        </tr>
+        <tr>
+            <td>Fecha de compra: </td>
+            <td> $buydate   </td>
+        </tr>
+
+        </table> </div>";
+    }
+    ?>
