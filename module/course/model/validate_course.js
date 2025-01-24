@@ -138,22 +138,7 @@ function validate(type) {
 
 }
 
-function ajaxPromise(url,data,type,data_type){
-    return new Promise((resolve, reject) => {
-        $.ajax({
-            type:type,
-            url:url,
-            data:data,
-            dataType:data_type,
-        }).done((data) =>{
-            resolve(data);
-        }).fail((jqXHR,textStatus,
-            errorThrow) =>{
-                reject(errorThrow);
-            });        
-    });
 
-}
 
 
 
@@ -161,7 +146,7 @@ $(document).ready(function() {
     $('.read_course').click(function() {
         console.log("aaaaaaa");
         let id = this.getAttribute('id');
-        ajaxPromise('module/course/controller_course.php?op=read_modal',{id:id}, 'POST',"JSON").then(function(data){
+        ajaxPromise('module/course/controller_course.php?op=read_modal', 'POST',"JSON",{id:id}).then(function(data){
             console.log("aaaaaaaaaajaaaaaaaxxx");
 
             $('<div></div>').attr('id','readonediv','type','hidden').appendTo('#readone');
