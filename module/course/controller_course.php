@@ -51,8 +51,16 @@ switch($_GET['op']){
             }
             if($insert){
                 echo '<script language="javascript">
-                    toastr.success("Creado en la base de datos correctamente");
-                    window.location.href="index.php?page=controller_course&op=list"; </script>';
+            swal({
+                title: "Exito!",
+                text: "Creado en la base de datos correctamente",
+                type: "success",
+                timer: 2000
+            });
+             setTimeout(() => {
+                    window.location.href="index.php?page=controller_course&op=list";
+                }, 2000);
+             </script>';
             }else{
                 die('<script>window.location.href="index.php?page=503";</script>');
             }
@@ -80,12 +88,17 @@ switch($_GET['op']){
                 die('<script>window.location.href="index.php?page=503";</script>');
             }
             if($update){
-                echo '<script language="javascript">setTimeout(() => {
-                    toastr.success("Actualizado en la base de datos correctamente");
-                }, 1000);
-                    setTimeout(() => {
+                echo '<script language="javascript">
+            swal({
+                title: "Exito!",
+                text: "Actualizado en la base de datos correctamente",
+                type: "success",
+                timer: 2000
+            });
+             setTimeout(() => {
                     window.location.href="index.php?page=controller_course&op=list";
-                }, 2000);</script>';
+                }, 2000);
+             </script>';
             }else{
                 die('<script>window.location.href="index.php?page=503";</script>');
             }
@@ -143,12 +156,18 @@ switch($_GET['op']){
             //     setTimeout(() => {
             //     window.location.href="index.php?page=controller_course&op=list";
             // }, 2000);</script>';
-            die ('<script language="javascript">setTimeout(() => {
-                toastr.success("Curso borrado correctamente");
-            }, 1000);
-                setTimeout(() => {
-                window.location.href="index.php?page=controller_course&op=list";
-            }, 2000);</script> <h1> Borrando el curso</h1>');
+            echo '<script language="javascript">
+            swal({
+                title: "Exito!",
+                text: "Curso borrado correctamente",
+                type: "success",
+                timer: 2000
+            });
+             setTimeout(() => {
+                    window.location.href="index.php?page=controller_course&op=list";
+                }, 2000);
+             </script>';
+             die();
         }else{
             die('<script>window.location.href="index.php?page=503"; ');
         }
@@ -166,10 +185,17 @@ switch($_GET['op']){
             $DAOCourse = new DAOCourse();
             $backup = $DAOCourse->backup();
         }catch (Exception $e){
-             echo '<script language="javascript">setTimeout(() => {
-                 toastr.success("Fallo al crear un backup");
-             }, 1000);';
-            die('<script>window.location.href="index.php?page=503";</script>');
+            echo '<script language="javascript">
+            swal({
+                title: "Ha ocurrido un error!",
+                text: "Fallo al crear un backup",
+                type: "error",
+                timer: 2000
+            });
+             setTimeout(() => {
+                    window.location.href="index.php?page=503";
+                }, 2000);
+             </script>';
         }
         try{
             $DAOCourse = new DAOCourse();
@@ -178,9 +204,11 @@ switch($_GET['op']){
             die('<script>window.location.href="index.php?page=503";</script>');
         }
         if($delete){
-            die ('<script language="javascript">setTimeout(() => {
-                toastr.success("Todos los cursos borrados correctamente");
-            }, 1000);
+            die ('<script language="javascript">swal({
+            title:"Exito!",
+            text:"Se han borrado los cursos correctamente",
+            type:"success",
+            timer:2000});
                 setTimeout(() => {
                 window.location.href="index.php?page=controller_course&op=list";
             }, 2000);</script> <h1> Borrando los cursos </h1>');
@@ -211,10 +239,17 @@ switch($_GET['op']){
             $DAOCourse = new DAOCourse();
             $backup = $DAOCourse->backup();
         }catch (Exception $e){
-             echo '<script language="javascript">setTimeout(() => {
-                 toastr.success("Fallo al crear un backup");
-             }, 1000);</script>';
-            die('<script>window.location.href="index.php?page=503";</script>');
+            echo '<script language="javascript">
+            swal({
+                title: "Ha ocurrido un error!",
+                text: "Fallo al restaurar un backup",
+                type: "error",
+                timer: 2000
+            });
+             setTimeout(() => {
+                    window.location.href="index.php?page=503";
+                }, 2000);
+             </script>';
         }
         try{
             $DAOCourse = new DAOCourse();
@@ -226,9 +261,17 @@ switch($_GET['op']){
             $DAOCourse = new DAOCourse();
             $delete = $DAOCourse->restore_backup($_GET['file']);
         }catch (Exception $e){
-            echo '<script language="javascript">setTimeout(() => {
-                toastr.success("Fallo al restaurar el backup");
-            }, 1000);';
+            echo '<script language="javascript">
+            swal({
+                title: "Ha ocurrido un error!",
+                text: "Fallo al restaurar un backup",
+                type: "error",
+                timer: 2000
+            });
+             setTimeout(() => {
+                    window.location.href="index.php?page=503";
+                }, 2000);
+             </script>';
         }
         if(!$delete){
             $date = (str_replace(":","-",$date));
@@ -238,18 +281,29 @@ switch($_GET['op']){
             }catch (Exception $e){
                 die('<script>window.location.href="index.php?page=503";</script>');
             }
-            echo '<script language="javascript">setTimeout(() => {
-                toastr.success("Fallo al restaurar el backup");
-            }, 1000);';
+            echo '<script language="javascript">
+            swal({
+                title: "Ha ocurrido un error!",
+                text: "Fallo al restaurar un backup",
+                type: "error",
+                timer: 2000
+            });
+             setTimeout(() => {
+                    window.location.href="index.php?page=503";
+                }, 2000);
+             </script>';
         }
-        echo '<script language="javascript">setTimeout(() => {
-            toastr.success("Backup restaurado correctamente");
-        }, 1000);
-            setTimeout(() => {
-            window.location.href="index.php?page=controller_course&op=list";
-        }, 2000);</script>';
-
-
+        echo '<script language="javascript">
+            swal({
+                title: "Exito!",
+                text: "Backup restaurado correctamente",
+                type: "success",
+                timer: 2000
+            });
+             setTimeout(() => {
+                    window.location.href="index.php?page=controller_course&op=list";
+                }, 2000);
+             </script>';
     }
     break;
 
@@ -260,15 +314,29 @@ switch($_GET['op']){
         $DAOCourse = new DAOCourse();
         $backup = $DAOCourse->backup();
     }catch (Exception $e){
-         echo '<script language="javascript">setTimeout(() => {
-             toastr.success("Fallo al crear un backup");
-         }, 1000);';
-        die('<script>window.location.href="index.php?page=503";</script>');
+        echo '<script language="javascript">
+        swal({
+            title: "Ha ocurrido un error!",
+            text: "Fallo al restaurar un backup",
+            type: "error",
+            timer: 2000
+        });
+         setTimeout(() => {
+                window.location.href="index.php?page=503";
+            }, 2000);
+         </script>';
     }
-    echo '<script>
-        setTimeout(() => {
-        window.location.href="index.php?page=controller_course&op=restore_backup&create=true";
-    }, 100);</script>';
+    echo '<script language="javascript">
+    swal({
+        title: "Exito!",
+        text: "Backup creado correctamente",
+        type: "success",
+        timer: 2000
+    });
+     setTimeout(() => {
+            window.location.href="index.php?page=controller_course&op=restore_backup";
+        }, 2000);
+     </script>';
     break;
 
     case 'dummies';
@@ -294,12 +362,17 @@ switch($_GET['op']){
             die('<script>window.location.href="index.php?page=503";</script>');
         }
         if($insert){
-            echo '<script language="javascript">setTimeout(() => {
-                toastr.success("Backup restaurado correctamente");
-            }, 1000);
-                setTimeout(() => {
-                window.location.href="index.php?page=controller_course&op=list";
-            }, 2000);</script>';
+            echo '<script language="javascript">
+            swal({
+                title: "Exito!",
+                text: "Dummies creados correctamente",
+                type: "success",
+                timer: 2000
+            });
+             setTimeout(() => {
+                    window.location.href="index.php?page=controller_course&op=list";
+                }, 2000);
+             </script>';
         }else{
             die('<script>window.location.href="index.php?page=503";</script>');
         }
