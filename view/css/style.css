@@ -47,6 +47,8 @@ h1{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	min-width:fit-content;
+	overflow-x: scroll;
 
 }
 /* #footer {
