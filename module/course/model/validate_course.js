@@ -138,8 +138,16 @@ function validate(type) {
 
 }
 
-
-
+$(document).ready(function(){
+    $('#navinicio').click(function(){
+        $('#navinicio').attr('class','active');
+    })
+})
+$(document).ready(function(){
+    $('#navCurso').click(function(){
+        $('#navCurso').attr('class','active');
+    })
+})
 
 
 $(document).ready(function() {

@@ -3,43 +3,42 @@
          font-size: 10pt;
          fontstyle:italic;
 }
-body{
+/* body{
     background-color:#F0F0FF;
     background-image: url(../img/background.png);
     background-attachment: fixed;
 	background-size: cover;
     background-repeat:no-repeat;
-}
+} */
 h1{
     font-size: 32pt;
 }
-#wrapper {
-	width: 80%;
+/* #wrapper {
 	margin:auto;
 	background-color: #a0d4f7;	
-}
-#header {
+} */
+/* #header {
 	height:80px;
 	background-image:url(../img/header.jpg);
 	background-size: cover;
 	background-repeat:no-repeat;
 	height:120px;
-}
-#menu {
+} */
+/* #menu {
 	background-image:url(../img/menu.png);
 	height:25px;
 	padding-top:5px;
 	text-align:center;
 	
-}
-#menu a, #footer a{
+} */
+/* #menu a, #footer a{
 	color:#FFFFFF;
 	text-decoration:none;
 	font-weight:bold;
 }
 #menu a:hover, #footer a:hover{
 	text-decoration:underline;
-}
+} */
 #contenido {
 	padding:20px;
 }
@@ -50,12 +49,12 @@ h1{
 	justify-content: center;
 
 }
-#footer {
+/* #footer {
 	background-image:url(../img/menu.png);
 	height:25px;
 	padding-top:5px;
 	text-align:center;
-}
+} */
 .Button_green {
 	background-color:green;
 	-moz-border-radius:28px;
@@ -163,7 +162,7 @@ h1{
 }
 
 #top_courses div{
-	background-color: #f1f1f1;
+	/* background-color: #f1f1f1; */
 	margin-inline: 25px;
 
 	text-align: center;

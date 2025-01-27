@@ -1,4 +1,4 @@
-<img src="view/img/bienvenido.png">
+<!-- <img src="view/img/bienvenido.png"> -->
 <?php
 include("module/course/model/DAOCourse.php");
 include("module/inicio/table_course");
@@ -10,3 +10,4 @@ foreach ($select as $course) {
 }
 ?>
 </div>
+<?php include("module\inicio/view\index.php"); ?>
