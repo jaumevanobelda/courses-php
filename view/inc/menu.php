@@ -8,11 +8,11 @@
 
 <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a id="navinicio" href="index.php?page=homepage">Inicio</a></li>
-          <li><a id="navCurso" href="index.php?page=controller_course&op=list">Curso</a></li>
-          <li><a  id="navServicios" href="index.php?page=services">Servicios</a></li>
-          <li><a id="navConocenos"  href="index.php?page=aboutus">Conocenos</a></li>
-          <li><a  id="navContacto" href="index.php?page=contactus">Contacto</a></li>
+          <li><a id="navhomepage" href="index.php?page=homepage">Inicio</a></li>
+          <li><a id="navcontroller_course" href="index.php?page=controller_course&op=list">Curso</a></li>
+          <li><a  id="navservices" href="index.php?page=services">Servicios</a></li>
+          <li><a id="navaboutus"  href="index.php?page=aboutus">Conocenos</a></li>
+          <li><a  id="navcontactus" href="index.php?page=contactus">Contacto</a></li>
           <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Dropdown 1</a></li>

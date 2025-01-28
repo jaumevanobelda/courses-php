@@ -138,18 +138,27 @@ function validate(type) {
 
 }
 
-$(document).ready(function(){
-    $('#navinicio').click(function(){
-        $('#navinicio').attr('class','active');
-    })
-})
-$(document).ready(function(){
-    $('#navCurso').click(function(){
-        console.log("navcursooooo");
-        $('#navCurso').attr('class','active');
-    })
-})
-
+// $(document).ready(function(){
+//     $('#navinicio').click(function(){
+//         console.log("inicioooo")
+//         $('#navinicio').attr('class','active');
+//     })
+// })
+// $(document).ready(function(){
+    
+//     $('#navCurso').click(function(){
+//         console.log("navcursooooo");
+//         let nav = "navCurso";
+//     })
+// })
+// addClass
+// window.onload= function(){
+//     console.log("sadsadasdsd");
+//     let params = new URLSearchParams(location.search);
+//     console.log(params.get('page'));
+//     console.log('#navmenu #nav' + params.get('page'));
+//     $('#navmenu #nav' + params.get('page')).addClass('active');    
+// }
 
 $(document).ready(function() {
     $('.read_course').click(function() {

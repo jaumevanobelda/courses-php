@@ -50,6 +50,15 @@
 
   });
 
+  window.onload= function(){
+    console.log("sadsadasdsd");
+    let params = new URLSearchParams(location.search);
+    console.log(params.get('page'));
+    console.log('#navmenu #nav' + params.get('page'));
+    $('#navmenu #nav' + params.get('page')).addClass('active');    
+}
+
+
   /**
    * Toggle mobile nav dropdowns
    */

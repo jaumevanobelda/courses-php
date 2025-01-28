@@ -79,6 +79,7 @@
     </div>
 
   </footer>
+  
   <script src="view/js/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="view/js/php-email-form/validate.js"></script>
   <script src="view/js/aos/aos.js"></script>
@@ -89,3 +90,4 @@
   <!-- Main JS File -->
    
   <script src="view/js/main.js"></script>
+  
