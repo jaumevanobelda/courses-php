@@ -28,6 +28,7 @@
   const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
 
   function mobileNavToogle() {
+    console.log("tooggggggleee");
     document.querySelector('body').classList.toggle('mobile-nav-active');
     mobileNavToggleBtn.classList.toggle('bi-list');
     mobileNavToggleBtn.classList.toggle('bi-x');
@@ -41,6 +42,7 @@
    */
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
     navmenu.addEventListener('click', () => {
+      console.log("CLIIIIIIIIICK NAVMENU");
       if (document.querySelector('.mobile-nav-active')) {
         mobileNavToogle();
       }

@@ -145,6 +145,7 @@ $(document).ready(function(){
 })
 $(document).ready(function(){
     $('#navCurso').click(function(){
+        console.log("navcursooooo");
         $('#navCurso').attr('class','active');
     })
 })

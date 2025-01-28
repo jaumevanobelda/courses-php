@@ -25,13 +25,3 @@
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="view/js/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="view/js/php-email-form/validate.js"></script>
-  <script src="view/js/aos/aos.js"></script>
-  <script src="view/js/glightbox/js/glightbox.min.js"></script>
-  <script src="view/js/swiper/swiper-bundle.min.js"></script>
-  <script src="view/js/purecounter/purecounter_vanilla.js"></script>
-
-  <!-- Main JS File -->
-   
-  <script src="view/js/main.js"></script>

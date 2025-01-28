@@ -9,7 +9,7 @@
 <nav id="navmenu" class="navmenu">
         <ul>
           <li><a id="navinicio" href="index.php?page=homepage">Inicio</a></li>
-          <li><a  id="navCurso" href="index.php?page=controller_course&op=list">Curso</a></li>
+          <li><a id="navCurso" href="index.php?page=controller_course&op=list">Curso</a></li>
           <li><a  id="navServicios" href="index.php?page=services">Servicios</a></li>
           <li><a id="navConocenos"  href="index.php?page=aboutus">Conocenos</a></li>
           <li><a  id="navContacto" href="index.php?page=contactus">Contacto</a></li>

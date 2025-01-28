@@ -4,7 +4,7 @@
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">iLanding</span>
+            <span class="sitename">Cursos </span>
           </a>
           <div class="footer-contact pt-3">
             <p>A108 Adam Street</p>
@@ -79,3 +79,13 @@
     </div>
 
   </footer>
+  <script src="view/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="view/js/php-email-form/validate.js"></script>
+  <script src="view/js/aos/aos.js"></script>
+  <script src="view/js/glightbox/glightbox.min.js"></script>
+  <script src="view/js/swiper/swiper-bundle.min.js"></script>
+  <script src="view/js/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+   
+  <script src="view/js/main.js"></script>
