@@ -12,23 +12,26 @@
     </head>
     <body>
         <div id="wrapper">
-            <div id="header">
+         <header id="header" class="header d-flex align-items-center fixed-top">
                 <?php
                     include("view/inc/header.php");
                 ?>
-            </div>
+            
 
-            <div id="menu">
+            <!-- <div id="menu"> -->
                 <?php
                     include("view/inc/menu.php");
                 ?>
-            </div>
+        </header>
+            <!-- </div> -->
 
             <div id="page">
+                <div class="hero">
                 <?php
                     include("view/inc/pages.php");
                 ?>
                 <br>
+            </div>
             </div>
         </div>
     <?php

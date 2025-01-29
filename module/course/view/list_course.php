@@ -44,10 +44,10 @@ $table = $table . "</table>";
 .tdnombre { max-width:150px; ;}
 .tdid {display:none;}
 .tddescription {display:table-cell; max-width:200px;}
-.tdllenguatge {display:none;}
+/* .tdllenguatge {display:none;}
 .tdstart {display:none;}
 .tdend {display:none;}
-.tdbuydate {display:none;}
+.tdbuydate {display:none;} */
 </style>
 
 
