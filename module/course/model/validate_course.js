@@ -3,7 +3,7 @@ function validate_texto(texto){
 
     if(texto.length > 0){
         let regex= /[a-z A-Z]*/;
-        console.log(texto + " " + regex.test(texto));
+        // console.log(texto + " " + regex.test(texto));
         return regex.test(texto);
     }
     return false;
@@ -22,8 +22,8 @@ function validate_checked(radio){
     Bool=false;
     if(radio.length > 0){
         radio.forEach(element => {
-            console.log("checked element: " + element.value);
-            console.log("Checked= " + element.checked);
+            // console.log("checked element: " + element.value);
+            // console.log("Checked= " + element.checked);
             if(element.checked){
                 Bool = true;
             }
@@ -36,7 +36,6 @@ function validate_array(array){
     Bool=false;
     if(array.length > 0){
         array.forEach(element => {
-            console.log("LLenguatje: "+ element);
             if(element != null){
                 Bool = true;
             }
@@ -45,6 +44,13 @@ function validate_array(array){
     }
     return false;
 }
+function isset(texto){
+    if(texto === null){
+        return false;
+    }
+    return true;
+}
+
 function validate_Dates(s,e,b){
     let sa = s.split("/");
     let se = e.split("/");
@@ -52,11 +58,11 @@ function validate_Dates(s,e,b){
     let start_str= sa[1] + "/" + sa[0]  + "/" +sa[2];
     let end_str= se[1] + "/" + se[0]  + "/" +se[2];
     let buydate_str= sb[1] + "/" + sb[0]  + "/" +sb[2];
-    console.log("Test date: " + new Date(start_str));
+    //console.log("Test date: " + new Date(start_str));
     let start = new Date(start_str);
     let end = new Date(end_str);
     let buydate = new Date(buydate_str);
-    console.log("Start: " + start.toLocaleString() + " End: " + end.toLocaleString() + " Buydate: " + buydate.toLocaleString()  );
+    //console.log("Start: " + start.toLocaleString() + " End: " + end.toLocaleString() + " Buydate: " + buydate.toLocaleString()  );
     let bool = true;
     if(start >= end){
         bool = false;
@@ -88,6 +94,18 @@ function validate(type) {
     let buydate = document.getElementById('buydate').value;
     let v_nombre = validate_texto(nombre);
     let v_descripcion = validate_texto(descripcion);
+    let array = ["aaaaaa"];
+    array['nombre'] = nombre;
+    array['descripcion'] = descripcion;
+    array['categoria'] = categoria;
+    array['llenguatge'] = llenguatge;
+    array['nivel'] = nivel;
+    array['precio'] = precio;
+    array['nombre'] = nombre;
+    array['start'] = start;
+    array['buydate'] = buydate;
+    array['end'] = end;
+    console.log(array);
 
     if(!v_nombre){
         document.getElementById('error_nombre').innerHTML = "El nombre introducido es incorrecto " + document.getElementById('error_nombre').innerHTML;
@@ -130,35 +148,26 @@ function validate(type) {
         document.getElementById('error_categoria').innerHTML = "Ninguna categoria selecionada" + document.getElementById('error_categoria').innerHTML;
         validate = false;
     }
-    console.log(validate);
+    for(row in array){
+        // console.log(row + "   " + array[row]);
+        // console.log(array[row] === "");   
+        if(array[row] === ""){
+            validate = false;
+            document.getElementById('error_'+ row).innerHTML = row + " esta vacio";
+        }
+    }
+    console.log("validate = " + validate + " JS");
     if(validate === true){
+        console.log("validate = " + validate + " if === true");
         document.getElementById( type + "_course").submit();
-            //document.getElementById("create_course").action = "index.php?page=controller_course&op=create";
+            document.getElementById("create_course").action = "index.php?page=controller_course&op="+type + "Sd";
     }
 
 }
 
-// $(document).ready(function(){
-//     $('#navinicio').click(function(){
-//         console.log("inicioooo")
-//         $('#navinicio').attr('class','active');
-//     })
-// })
-// $(document).ready(function(){
-    
-//     $('#navCurso').click(function(){
-//         console.log("navcursooooo");
-//         let nav = "navCurso";
-//     })
-// })
-// addClass
-// window.onload= function(){
-//     console.log("sadsadasdsd");
-//     let params = new URLSearchParams(location.search);
-//     console.log(params.get('page'));
-//     console.log('#navmenu #nav' + params.get('page'));
-//     $('#navmenu #nav' + params.get('page')).addClass('active');    
-// }
+
+
+
 
 $(document).ready(function() {
     $('.read_course').click(function() {

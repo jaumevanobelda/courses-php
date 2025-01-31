@@ -10,8 +10,7 @@ foreach ($array_error as $error){
 
 <div id="contenido"> </div>
 
-<form autocomplete="on" method="post" name="create_course" id="create_course" 
-    action="index.php?page=controller_course&op=create">
+<form autocomplete="on" method="post" name="create_course" id="create_course">
 
     <h3> Crear usuario</h3>
 
@@ -130,7 +129,9 @@ foreach ($array_error as $error){
             </td>
 
         </tr>
-
+    </table>
+</form> 
+    <table>
         <tr>
 
             <td> <button onclick="validate('create')"> enviar </button> </td>
@@ -139,6 +140,6 @@ foreach ($array_error as $error){
             <td> <a href="index.php?page=controller_course&op=list">Volver</a> </td>
 
         </tr>
-    </table>
-</form>
+   </table>
+
 </div>
